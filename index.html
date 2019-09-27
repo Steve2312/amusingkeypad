@@ -8,6 +8,17 @@
 </head>
 
 <body>
+    <script>
+        window.onload = function () {
+            var loaders = document.getElementById('loader');
+            loaders.style.opacity = '0';
+            setTimeout(function () { loaders.remove(); }, 900);
+        }
+    </script>
+    <div id='loader'>
+        <div></div>
+    </div>
+
     <div class="banner">
         <div class="banner-text" style="justify-content: center; align-content: center; margin-bottom: auto;">
             <h1 id="rQuote" style="opacity: 1;">Amusing Keypad</h1>
@@ -27,8 +38,8 @@
 
         <div class="row">
             <div class="col-6 col-s-6 border">
-                    <img src="images/mascot.png" style="width: 90%;" />
-                    <p>Scroll down to see the products and drivers!</p>
+                <img src="images/mascot.png" style="width: 90%;" />
+                <p>Scroll down to see the products and drivers!</p>
             </div>
 
             <div class="col-6 col-s-6 border">

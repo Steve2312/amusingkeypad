@@ -24,3 +24,52 @@
 #rQuote {
     font-size: 7vw;
 }
+
+#loader {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: black;
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+    position: absolute;
+    z-index: 2;
+}
+
+    #loader div {
+        border: 4px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 4px solid #3498db;
+        width: 30px;
+        height: 30px;
+        /* animação (troque a velocidade de acordo com os segundos) */
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+        /* alinhamento centralizado */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
