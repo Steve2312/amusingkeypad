@@ -24,3 +24,231 @@
 #rQuote {
     font-size: 7vw;
 }
+/*Slider Image*/
+.containerslider {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+    .mySlides img {
+        width: 80% !important;
+        height: auto;
+    }
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(20%, -50%);
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(25,25,25, 1);
+    }
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    border: 2px solid #222;
+    width: 100px;
+    margin: 20px;
+    border-radius: 6px 3px 6px 3px;
+}
+
+.black {
+    border: 2px solid #222;
+    background-color: rgba(25,25,25, 1);
+    color: white;
+    -webkit-transition: background-color .9s ease-in-out;
+    -moz-transition: background-color .9s ease-in-out;
+    -ms-transition: background-color .9s ease-in-out;
+    -o-transition: background-color .9s ease-in-out;
+    transition: background-color .9s ease-in-out;
+    -webkit-transition: border .9s ease-in-out;
+    -moz-transition: border .9s ease-in-out;
+    -ms-transition: border .9s ease-in-out;
+    -o-transition: border .9s ease-in-out;
+    transition: border .9s ease-in-out;
+    -webkit-transition: color .9s ease-in-out;
+    -moz-transition: color .9s ease-in-out;
+    -ms-transition: color .9s ease-in-out;
+    -o-transition: color .9s ease-in-out;
+    transition: color .9s ease-in-out;
+}
+
+.silver {
+    border: 2px solid rgb(214, 214, 214);
+    background-color: rgb(239, 245, 255);
+    color: black;
+    -webkit-transition: background-color .9s ease-in-out;
+    -moz-transition: background-color .9s ease-in-out;
+    -ms-transition: background-color .9s ease-in-out;
+    -o-transition: background-color .9s ease-in-out;
+    transition: background-color .9s ease-in-out;
+    -webkit-transition: border .9s ease-in-out;
+    -moz-transition: border .9s ease-in-out;
+    -ms-transition: border .9s ease-in-out;
+    -o-transition: border .9s ease-in-out;
+    transition: border .9s ease-in-out;
+    -webkit-transition: color .9s ease-in-out;
+    -moz-transition: color .9s ease-in-out;
+    -ms-transition: color .9s ease-in-out;
+    -o-transition: color .9s ease-in-out;
+    transition: color .9s ease-in-out;
+}
+
+#caption {
+    margin: 10px;
+}
+
+
+.column {
+    float: left;
+    margin: 5px;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+/*Slider Image End*/
+#aliexpress {
+    background-color: #ff1111;
+    color: #111;
+    height: 50px;
+    width: auto;
+    max-width: 300px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    #aliexpress img {
+        height: 22px;
+        margin-top: 13px;
+    }
+
+#taobao {
+    background-color: #ff5230;
+    color: #111;
+    height: 50px;
+    width: auto;
+    max-width: 300px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    #taobao img {
+        height: 25px;
+        margin-top: 13px;
+    }
+
+#ebay {
+    background-color: #ffffff;
+    color: #111;
+    height: 50px;
+    width: auto;
+    max-width: 300px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    #ebay img {
+        height: 25px;
+        margin-top: 13px;
+    }
+
+#addtocart {
+    background-color: #ffc439;
+    color: #111;
+    height: 50px;
+    height: 50px;
+    width: auto;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    #addtocart img {
+        margin-top: 11px;
+        height: 25px;
+    }
+
+.cursor {
+    cursor: pointer;
+}
+
+.packagetype {
+    display: inline-block;
+}
+
+    .packagetype label {
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-bottom: 2px solid rgba(255,255,255, 0.2);
+        padding: 10px;
+        display: inline-block;
+        margin: 4px;
+    }
+
+        .packagetype label:hover {
+            border-bottom: 2px solid rgba(255,255,255, 0.7);
+        }
+
+.checked {
+    border: 2px solid rgba(255,255,255,1) !important;
+}
+
+.colortype {
+    display: inline-block;
+}
+
+    .colortype label {
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-bottom: 2px solid rgba(255,255,255, 0.2);
+        padding: 10px;
+        margin: 3px;
+    }
+
+        .colortype label:hover {
+            border-bottom: 2px solid rgba(255,255,255, 0.7);
+        }

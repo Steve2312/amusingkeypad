@@ -50,25 +50,25 @@ html {
 }
 
 /* For tablets: */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     .col-s-1 {
-        width: 8.33%;
+        width: 10%;
     }
 
     .col-s-2 {
-        width: 16.66%;
+        width: 20%;
     }
 
     .col-s-3 {
-        width: 25%;
+        width: 30%;
     }
 
     .col-s-4 {
-        width: 33.33%;
+        width: 50%;
     }
 
     .col-s-5 {
-        width: 41.66%;
+        width: 45%;
     }
 
     .col-s-6 {
@@ -76,23 +76,23 @@ html {
     }
 
     .col-s-7 {
-        width: 58.33%;
+        width: 55%;
     }
 
     .col-s-8 {
-        width: 66.66%;
+        width: 50%;
     }
 
     .col-s-9 {
-        width: 75%;
+        width: 70%;
     }
 
     .col-s-10 {
-        width: 83.33%;
+        width: 80%;
     }
 
     .col-s-11 {
-        width: 91.66%;
+        width: 90%;
     }
 
     .col-s-12 {
@@ -110,7 +110,7 @@ html {
 
 }
 /* For desktop: */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1015px) {
     .col-1 {
         width: 8.33%;
     }
@@ -202,20 +202,21 @@ p {
     z-index: 2;
 }
 
-    #loader div {
+#loader_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    #loader_border {
         border: 4px solid #f3f3f3;
         border-radius: 50%;
         border-top: 4px solid #3498db;
         width: 30px;
         height: 30px;
-        /* animação (troque a velocidade de acordo com os segundos) */
         -webkit-animation: spin 1s linear infinite;
         animation: spin 1s linear infinite;
-        /* alinhamento centralizado */
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
 @-webkit-keyframes spin {
@@ -236,4 +237,12 @@ p {
     100% {
         transform: rotate(360deg);
     }
+}
+
+hr {
+    width: 100%;
+    opacity: 0.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
 }

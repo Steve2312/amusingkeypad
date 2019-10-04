@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="theme_hibiki.css" rel="stylesheet" type="text/css" />
     <link href="home.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,9 @@
         }
     </script>
     <div id='loader'>
-        <div></div>
+        <div id="loader_wrapper">
+            <div id="loader_border"></div>
+        </div>
     </div>
 
     <div class="banner">
@@ -95,6 +98,216 @@
             </div>
         </div>
 
+        <div class="row border">
+            <div class="col-4 col-s-4">
+                <div style="margin: 15px; text-align:left;">
+                    <h2 style="margin-top: 20px;">AmusingKeypad Pro</h2>
+                    <p>2key &amp; RGB</p>
+                    <p>Latest AmusingKeypad with RGB and hot swappable Cherry MX Switches.</p>
+                    <img src="images/2k.png" style="width: 90%;" />
+                </div>
+            </div>
+
+            <div class="col-4 col-s-4">
+                <h3 style="text-align:left;">Package contains:</h3>
+                <p style="text-align:left;">
+                    - The Keypad itself,
+                    <br />
+                    - Cherry MX switches
+                    <br />
+                    - USB Type-C to USB Type-A cable
+                    <br />
+                    - 1 Sticky pad
+                    <br />
+                    - Keypad protection case
+                </p>
+
+                <h3 style="text-align:left; margin-top: 30px;">Images:</h3>
+                <div class="containerslider">
+                    <div class="sliderarrows">
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                    <div class="mySlides" style="display: block;">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="images/2.0.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides" style="display: none;">
+                        <div class="numbertext">2 / 2</div>
+                        <img src="images/2.1.png" style="width:100%">
+                    </div>
+                </div>
+
+                <div class="containerslider">
+                    <div class="caption-container black" id="caption-container-id">
+                        <p id="caption">Black</p>
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor active" src="images/2.0.png" style="width:100%" onclick="currentSlide(1)" alt="Black">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/2.1.png" style="width:100%" onclick="currentSlide(2)" alt="Silver">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 col-s-4">
+                <h3 style="text-align:left;">Amusing Keypad 2 key - Black/Silver & Cherry-MX switches</h3>
+                <p style="text-align: left;"> • Price: <a id="price" style="font-family: 'Noto Sans', sans-serif !important;">33.60$ - 38.40$</a></p>
+                <hr>
+                <div style="margin: 15px; text-align: center; align-content: center;">
+                    <form id="Amusing2k" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="return true" style="margin-top: 20px; margin-bottom: 20px;">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="7LRQPYGXYPSTE">
+                        <p id="packagetypetext" style="justify-content: center; align-content: center; margin-bottom: auto; text-align: left !important;"> Package Type </p>
+                        <table style="margin-right:auto; width: 100%;">
+                            <tbody>
+                                <tr><td><input type="hidden" name="on0" value="Package Type"></td></tr>
+                                <tr>
+                                    <td>
+                                        <div class="packagetype" style="text-align: left !important; margin-bottom: 20px;">
+                                            <input class="packagetype" style="display:none;" id="Cherry-Red" type="checkbox" name="os0" value="Cherry-Red">
+                                            <label id="LabelCherry-Red" for="Cherry-Red">Cherry-Red</label>
+
+                                            <input class="packagetype" style="display:none;" id="Cherry-Brown" type="checkbox" name="os0" value="Cherry-Brown">
+                                            <label id="LabelCherry-Brown" for="Cherry-Brown">Cherry-Brown</label>
+
+                                            <input class="packagetype" style="display:none;" id="Cherry-Cyan" type="checkbox" name="os0" value="Cherry-Cyan">
+                                            <label id="LabelCherry-Cyan" for="Cherry-Cyan">Cherry-Cyan</label>
+
+                                            <input class="packagetype" style="display:none;" id="Cherry-Black" type="checkbox" name="os0" value="Cherry-Black">
+                                            <label id="LabelCherry-Black" for="Cherry-Black">Cherry-Black</label>
+
+                                            <input class="packagetype" style="display:none;" id="Cherry-Silver" type="checkbox" name="os0" value="Cherry-Silver">
+                                            <label id="LabelCherry-Silver" for="Cherry-Silver">Cherry-Silver</label>
+
+                                            <input class="packagetype" style="display:none;" id="Cherry-All" type="checkbox" name="os0" value="Cherry-All">
+                                            <label id="LabelCherry-All" for="Cherry-All">Cherry-All</label>
+                                        </div>
+                                        <!--Only Select One-->
+                                        <script>
+                                            $("input:checkbox").on('click', function () {
+
+                                                setTimeout(function () { UpdatePackageBorder(); }, 10);
+
+                                                var $box = $(this);
+                                                if ($box.is(":checked")) {
+                                                    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                                                    $(group).prop("checked", false);
+                                                    $box.prop("checked", true);
+                                                } else {
+                                                    $box.prop("checked", false);
+                                                }
+                                            });
+
+                                            function UpdatePackageBorder() {
+
+                                                removePackageBorder();
+
+                                                if (document.getElementById("Cherry-Red").checked === true) {
+                                                    document.getElementById("price").innerHTML = "33.60$";
+                                                    document.getElementById("LabelCherry-Red").classList.add("checked");
+                                                }
+                                                if (document.getElementById("Cherry-Brown").checked === true) {
+                                                    document.getElementById("price").innerHTML = "33.60$";
+                                                    document.getElementById("LabelCherry-Brown").classList.add("checked");
+                                                }
+                                                if (document.getElementById("Cherry-Cyan").checked === true) {
+                                                    document.getElementById("price").innerHTML = "33.60$";
+                                                    document.getElementById("LabelCherry-Cyan").classList.add("checked");
+                                                }
+                                                if (document.getElementById("Cherry-Black").checked === true) {
+                                                    document.getElementById("price").innerHTML = "33.60$";
+                                                    document.getElementById("LabelCherry-Black").classList.add("checked");
+                                                }
+                                                if (document.getElementById("Cherry-Silver").checked === true) {
+                                                    document.getElementById("price").innerHTML = "34.40$";
+                                                    document.getElementById("LabelCherry-Silver").classList.add("checked");
+                                                }
+                                                if (document.getElementById("Cherry-All").checked === true) {
+                                                    document.getElementById("price").innerHTML = "38.40$";
+                                                    document.getElementById("LabelCherry-All").classList.add("checked");
+                                                }
+
+                                                function removePackageBorder() {
+                                                    document.getElementById("LabelCherry-Red").classList.remove("checked");
+                                                    document.getElementById("LabelCherry-Brown").classList.remove("checked");
+                                                    document.getElementById("LabelCherry-Cyan").classList.remove("checked");
+                                                    document.getElementById("LabelCherry-Black").classList.remove("checked");
+                                                    document.getElementById("LabelCherry-Silver").classList.remove("checked");
+                                                    document.getElementById("LabelCherry-All").classList.remove("checked");
+                                                }
+                                            }
+
+                                            $(document).ready(function () {
+                                                document.getElementById("price").innerHTML = "33.60$ - 38.40$";
+                                            });
+                                        </script>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p id="colortext" style="justify-content: center; align-content: center; margin-bottom: auto; text-align: left !important;"> Color </p>
+                        <table style="margin-right:auto;">
+                            <tbody>
+                                <tr><td><input type="hidden" name="on1" value="Color"></td></tr>
+                                <tr>
+                                    <td>
+                                        <div class="colortype">
+                                            <input class="color" style="display:none;" id="BlackColor" type="checkbox" name="os1" value="Black">
+                                            <label id="LabelBlack" for="BlackColor">Black</label>
+
+                                            <input class="color" style="display:none;" id="SilverColor" type="checkbox" name="os1" value="Silver">
+                                            <label id="LabelSilver" for="SilverColor">Silver</label>
+                                        </div>
+
+                                        <script>
+                                            $("input:checkbox").on('click', function () {
+                                                setTimeout(function () { UpdateColorBorder(); }, 10);
+                                                var $box = $(this);
+                                                if ($box.is(":checked")) {
+                                                    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                                                    $(group).prop("checked", false);
+                                                    $box.prop("checked", true);
+                                                } else {
+                                                    $box.prop("checked", false);
+                                                }
+                                            });
+
+                                            function UpdateColorBorder() {
+
+                                                removeColorBorder();
+
+                                                if (document.getElementById("BlackColor").checked === true) {
+                                                    document.getElementById("LabelBlack").classList.add("checked");
+                                                }
+                                                if (document.getElementById("SilverColor").checked === true) {
+                                                    document.getElementById("LabelSilver").classList.add("checked");
+                                                }
+
+                                                function removeColorBorder() {
+                                                    document.getElementById("LabelBlack").classList.remove("checked");
+                                                    document.getElementById("LabelSilver").classList.remove("checked");
+                                                }
+                                            }
+                                        </script>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <div class="cursor" id="addtocart" style="margin-left:auto; margin-right:auto;"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAzMiIgeG1sbnM9Imh0dHA6JiN4MkY7JiN4MkY7d3d3LnczLm9yZyYjeDJGOzIwMDAmI3gyRjtzdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiPjxwYXRoIGZpbGw9IiMwMDljZGUiIGQ9Ik0gMjAuOTA1IDkuNSBDIDIxLjE4NSA3LjQgMjAuOTA1IDYgMTkuNzgyIDQuNyBDIDE4LjU2NCAzLjMgMTYuNDExIDIuNiAxMy42OTcgMi42IEwgNS43MzkgMi42IEMgNS4yNzEgMi42IDQuNzEgMy4xIDQuNjE1IDMuNiBMIDEuMzM5IDI1LjggQyAxLjMzOSAyNi4yIDEuNjIgMjYuNyAyLjA4OCAyNi43IEwgNi45NTYgMjYuNyBMIDYuNjc1IDI4LjkgQyA2LjU4MSAyOS4zIDYuODYyIDI5LjYgNy4yMzYgMjkuNiBMIDExLjM1NiAyOS42IEMgMTEuODI1IDI5LjYgMTIuMjkyIDI5LjMgMTIuMzg2IDI4LjggTCAxMi4zODYgMjguNSBMIDEzLjIyOCAyMy4zIEwgMTMuMjI4IDIzLjEgQyAxMy4zMjIgMjIuNiAxMy43OSAyMi4yIDE0LjI1OCAyMi4yIEwgMTQuODIxIDIyLjIgQyAxOC44NDUgMjIuMiAyMS45MzUgMjAuNSAyMi44NzEgMTUuNSBDIDIzLjMzOSAxMy40IDIzLjE1MyAxMS43IDIyLjAyOSAxMC41IEMgMjEuNzQ4IDEwLjEgMjEuMjc5IDkuOCAyMC45MDUgOS41IEwgMjAuOTA1IDkuNSI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMTIxNjkiIGQ9Ik0gMjAuOTA1IDkuNSBDIDIxLjE4NSA3LjQgMjAuOTA1IDYgMTkuNzgyIDQuNyBDIDE4LjU2NCAzLjMgMTYuNDExIDIuNiAxMy42OTcgMi42IEwgNS43MzkgMi42IEMgNS4yNzEgMi42IDQuNzEgMy4xIDQuNjE1IDMuNiBMIDEuMzM5IDI1LjggQyAxLjMzOSAyNi4yIDEuNjIgMjYuNyAyLjA4OCAyNi43IEwgNi45NTYgMjYuNyBMIDguMjY3IDE4LjQgTCA4LjE3MyAxOC43IEMgOC4yNjcgMTguMSA4LjczNSAxNy43IDkuMjk2IDE3LjcgTCAxMS42MzYgMTcuNyBDIDE2LjIyNCAxNy43IDE5Ljc4MiAxNS43IDIwLjkwNSAxMC4xIEMgMjAuODEyIDkuOCAyMC45MDUgOS43IDIwLjkwNSA5LjUiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDkuNDg1IDkuNSBDIDkuNTc3IDkuMiA5Ljc2NSA4LjkgMTAuMDQ2IDguNyBDIDEwLjIzMiA4LjcgMTAuMzI2IDguNiAxMC41MTMgOC42IEwgMTYuNjkyIDguNiBDIDE3LjQ0MiA4LjYgMTguMTg5IDguNyAxOC43NTMgOC44IEMgMTguOTM5IDguOCAxOS4xMjcgOC44IDE5LjMxNCA4LjkgQyAxOS41MDEgOSAxOS42ODggOSAxOS43ODIgOS4xIEMgMTkuODc1IDkuMSAxOS45NjggOS4xIDIwLjA2MyA5LjEgQyAyMC4zNDMgOS4yIDIwLjYyNCA5LjQgMjAuOTA1IDkuNSBDIDIxLjE4NSA3LjQgMjAuOTA1IDYgMTkuNzgyIDQuNiBDIDE4LjY1OCAzLjIgMTYuNTA2IDIuNiAxMy43OSAyLjYgTCA1LjczOSAyLjYgQyA1LjI3MSAyLjYgNC43MSAzIDQuNjE1IDMuNiBMIDEuMzM5IDI1LjggQyAxLjMzOSAyNi4yIDEuNjIgMjYuNyAyLjA4OCAyNi43IEwgNi45NTYgMjYuNyBMIDguMjY3IDE4LjQgTCA5LjQ4NSA5LjUgWiI+PC9wYXRoPjwvc3ZnPg==" alt="PP" class="paypal-logo paypal-logo-pp paypal-logo-color-blue" style="visibility: visible;"> <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMTAwIDMyIiB4bWxucz0iaHR0cDomI3gyRjsmI3gyRjt3d3cudzMub3JnJiN4MkY7MjAwMCYjeDJGO3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gbWVldCI+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAxMiA0LjkxNyBMIDQuMiA0LjkxNyBDIDMuNyA0LjkxNyAzLjIgNS4zMTcgMy4xIDUuODE3IEwgMCAyNS44MTcgQyAtMC4xIDI2LjIxNyAwLjIgMjYuNTE3IDAuNiAyNi41MTcgTCA0LjMgMjYuNTE3IEMgNC44IDI2LjUxNyA1LjMgMjYuMTE3IDUuNCAyNS42MTcgTCA2LjIgMjAuMjE3IEMgNi4zIDE5LjcxNyA2LjcgMTkuMzE3IDcuMyAxOS4zMTcgTCA5LjggMTkuMzE3IEMgMTQuOSAxOS4zMTcgMTcuOSAxNi44MTcgMTguNyAxMS45MTcgQyAxOSA5LjgxNyAxOC43IDguMTE3IDE3LjcgNi45MTcgQyAxNi42IDUuNjE3IDE0LjYgNC45MTcgMTIgNC45MTcgWiBNIDEyLjkgMTIuMjE3IEMgMTIuNSAxNS4wMTcgMTAuMyAxNS4wMTcgOC4zIDE1LjAxNyBMIDcuMSAxNS4wMTcgTCA3LjkgOS44MTcgQyA3LjkgOS41MTcgOC4yIDkuMzE3IDguNSA5LjMxNyBMIDkgOS4zMTcgQyAxMC40IDkuMzE3IDExLjcgOS4zMTcgMTIuNCAxMC4xMTcgQyAxMi45IDEwLjUxNyAxMy4xIDExLjIxNyAxMi45IDEyLjIxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSAzNS4yIDEyLjExNyBMIDMxLjUgMTIuMTE3IEMgMzEuMiAxMi4xMTcgMzAuOSAxMi4zMTcgMzAuOSAxMi42MTcgTCAzMC43IDEzLjYxNyBMIDMwLjQgMTMuMjE3IEMgMjkuNiAxMi4wMTcgMjcuOCAxMS42MTcgMjYgMTEuNjE3IEMgMjEuOSAxMS42MTcgMTguNCAxNC43MTcgMTcuNyAxOS4xMTcgQyAxNy4zIDIxLjMxNyAxNy44IDIzLjQxNyAxOS4xIDI0LjgxNyBDIDIwLjIgMjYuMTE3IDIxLjkgMjYuNzE3IDIzLjggMjYuNzE3IEMgMjcuMSAyNi43MTcgMjkgMjQuNjE3IDI5IDI0LjYxNyBMIDI4LjggMjUuNjE3IEMgMjguNyAyNi4wMTcgMjkgMjYuNDE3IDI5LjQgMjYuNDE3IEwgMzIuOCAyNi40MTcgQyAzMy4zIDI2LjQxNyAzMy44IDI2LjAxNyAzMy45IDI1LjUxNyBMIDM1LjkgMTIuNzE3IEMgMzYgMTIuNTE3IDM1LjYgMTIuMTE3IDM1LjIgMTIuMTE3IFogTSAzMC4xIDE5LjMxNyBDIDI5LjcgMjEuNDE3IDI4LjEgMjIuOTE3IDI1LjkgMjIuOTE3IEMgMjQuOCAyMi45MTcgMjQgMjIuNjE3IDIzLjQgMjEuOTE3IEMgMjIuOCAyMS4yMTcgMjIuNiAyMC4zMTcgMjIuOCAxOS4zMTcgQyAyMy4xIDE3LjIxNyAyNC45IDE1LjcxNyAyNyAxNS43MTcgQyAyOC4xIDE1LjcxNyAyOC45IDE2LjExNyAyOS41IDE2LjcxNyBDIDMwIDE3LjQxNyAzMC4yIDE4LjMxNyAzMC4xIDE5LjMxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwMzA4NyIgZD0iTSA1NS4xIDEyLjExNyBMIDUxLjQgMTIuMTE3IEMgNTEgMTIuMTE3IDUwLjcgMTIuMzE3IDUwLjUgMTIuNjE3IEwgNDUuMyAyMC4yMTcgTCA0My4xIDEyLjkxNyBDIDQzIDEyLjQxNyA0Mi41IDEyLjExNyA0Mi4xIDEyLjExNyBMIDM4LjQgMTIuMTE3IEMgMzggMTIuMTE3IDM3LjYgMTIuNTE3IDM3LjggMTMuMDE3IEwgNDEuOSAyNS4xMTcgTCAzOCAzMC41MTcgQyAzNy43IDMwLjkxNyAzOCAzMS41MTcgMzguNSAzMS41MTcgTCA0Mi4yIDMxLjUxNyBDIDQyLjYgMzEuNTE3IDQyLjkgMzEuMzE3IDQzLjEgMzEuMDE3IEwgNTUuNiAxMy4wMTcgQyA1NS45IDEyLjcxNyA1NS42IDEyLjExNyA1NS4xIDEyLjExNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny41IDQuOTE3IEwgNTkuNyA0LjkxNyBDIDU5LjIgNC45MTcgNTguNyA1LjMxNyA1OC42IDUuODE3IEwgNTUuNSAyNS43MTcgQyA1NS40IDI2LjExNyA1NS43IDI2LjQxNyA1Ni4xIDI2LjQxNyBMIDYwLjEgMjYuNDE3IEMgNjAuNSAyNi40MTcgNjAuOCAyNi4xMTcgNjAuOCAyNS44MTcgTCA2MS43IDIwLjExNyBDIDYxLjggMTkuNjE3IDYyLjIgMTkuMjE3IDYyLjggMTkuMjE3IEwgNjUuMyAxOS4yMTcgQyA3MC40IDE5LjIxNyA3My40IDE2LjcxNyA3NC4yIDExLjgxNyBDIDc0LjUgOS43MTcgNzQuMiA4LjAxNyA3My4yIDYuODE3IEMgNzIgNS42MTcgNzAuMSA0LjkxNyA2Ny41IDQuOTE3IFogTSA2OC40IDEyLjIxNyBDIDY4IDE1LjAxNyA2NS44IDE1LjAxNyA2My44IDE1LjAxNyBMIDYyLjYgMTUuMDE3IEwgNjMuNCA5LjgxNyBDIDYzLjQgOS41MTcgNjMuNyA5LjMxNyA2NCA5LjMxNyBMIDY0LjUgOS4zMTcgQyA2NS45IDkuMzE3IDY3LjIgOS4zMTcgNjcuOSAxMC4xMTcgQyA2OC40IDEwLjUxNyA2OC41IDExLjIxNyA2OC40IDEyLjIxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC43IDEyLjExNyBMIDg3IDEyLjExNyBDIDg2LjcgMTIuMTE3IDg2LjQgMTIuMzE3IDg2LjQgMTIuNjE3IEwgODYuMiAxMy42MTcgTCA4NS45IDEzLjIxNyBDIDg1LjEgMTIuMDE3IDgzLjMgMTEuNjE3IDgxLjUgMTEuNjE3IEMgNzcuNCAxMS42MTcgNzMuOSAxNC43MTcgNzMuMiAxOS4xMTcgQyA3Mi44IDIxLjMxNyA3My4zIDIzLjQxNyA3NC42IDI0LjgxNyBDIDc1LjcgMjYuMTE3IDc3LjQgMjYuNzE3IDc5LjMgMjYuNzE3IEMgODIuNiAyNi43MTcgODQuNSAyNC42MTcgODQuNSAyNC42MTcgTCA4NC4zIDI1LjYxNyBDIDg0LjIgMjYuMDE3IDg0LjUgMjYuNDE3IDg0LjkgMjYuNDE3IEwgODguMyAyNi40MTcgQyA4OC44IDI2LjQxNyA4OS4zIDI2LjAxNyA4OS40IDI1LjUxNyBMIDkxLjQgMTIuNzE3IEMgOTEuNCAxMi41MTcgOTEuMSAxMi4xMTcgOTAuNyAxMi4xMTcgWiBNIDg1LjUgMTkuMzE3IEMgODUuMSAyMS40MTcgODMuNSAyMi45MTcgODEuMyAyMi45MTcgQyA4MC4yIDIyLjkxNyA3OS40IDIyLjYxNyA3OC44IDIxLjkxNyBDIDc4LjIgMjEuMjE3IDc4IDIwLjMxNyA3OC4yIDE5LjMxNyBDIDc4LjUgMTcuMjE3IDgwLjMgMTUuNzE3IDgyLjQgMTUuNzE3IEMgODMuNSAxNS43MTcgODQuMyAxNi4xMTcgODQuOSAxNi43MTcgQyA4NS41IDE3LjQxNyA4NS43IDE4LjMxNyA4NS41IDE5LjMxNyBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5NS4xIDUuNDE3IEwgOTEuOSAyNS43MTcgQyA5MS44IDI2LjExNyA5Mi4xIDI2LjQxNyA5Mi41IDI2LjQxNyBMIDk1LjcgMjYuNDE3IEMgOTYuMiAyNi40MTcgOTYuNyAyNi4wMTcgOTYuOCAyNS41MTcgTCAxMDAgNS42MTcgQyAxMDAuMSA1LjIxNyA5OS44IDQuOTE3IDk5LjQgNC45MTcgTCA5NS44IDQuOTE3IEMgOTUuNCA0LjkxNyA5NS4yIDUuMTE3IDk1LjEgNS40MTcgWiI+PC9wYXRoPjwvc3ZnPg=="></div>
+                    <p>Distributors (Third Party Sellers):</p>
+                    <a target="_blank" href="https://www.aliexpress.com/item/HFSECURITY-DIY-Black-OSU-Keyboard-V4-For-Windows-5-Key-Gaming-Keyboard-USB-2-0-Backlit/32857087236.html?spm=2114.search0104.3.45.2c6c57fdbYhCil&amp;ws_ab_test=searchweb0_0,searchweb201602_10_10065_10068_10843_319_10059_10884_317_10887_10696_321_322_453_10084_454_10083_10103_10618_10304_10307_10820_10301_10821_537_536,searchweb201603_52,ppcSwitch_0&amp;algo_expid=35d4a5ee-a320-4efc-944e-8cc18264dc04-5&amp;algo_pvid=35d4a5ee-a320-4efc-944e-8cc18264dc04"><div class="cursor" id="aliexpress" style="margin-left:auto; margin-right:auto;"><img src="images/alitext.png"></div></a>
+                    <a target="_blank" href="https://item.taobao.com/item.htm?id=569320386829"><div class="cursor" id="taobao" style="margin-top: 20px; margin-left:auto; margin-right:auto;"><img src="images/taobaotext.png"></div></a>
+                    <a target="_blank" href="https://www.ebay.com/itm/163540549190"><div class="cursor" id="ebay" style="margin-top: 20px; margin-left:auto; margin-right:auto;"><img src="images/ebaytext.png"></div></a>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12 col-s-12">
                 <h1 style="text-align: left;">Drivers</h1>
@@ -146,6 +359,109 @@
 
         </div>
     </div>
+    <!--Slider Image Script-->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+
+            var captionText = document.getElementById("caption");
+            var captionid = document.getElementById("caption-container-id");
+
+            if (captionText.innerHTML.indexOf("Silver") !== -1) {
+                captionid.classList.remove("black");
+                captionid.classList.add("silver");
+
+            }
+
+            if (captionText.innerHTML.indexOf("Black") !== -1) {
+                captionid.classList.add("black");
+                captionid.classList.remove("silver");
+            }
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+
+            var captionText = document.getElementById("caption");
+            var captionid = document.getElementById("caption-container-id");
+
+            if (captionText.innerHTML.indexOf("Silver") !== -1) {
+                captionid.classList.remove("black");
+                captionid.classList.add("silver");
+
+            }
+
+            if (captionText.innerHTML.indexOf("Black") !== -1) {
+                captionid.classList.add("black");
+                captionid.classList.remove("silver");
+            }
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+
+            var captionText = document.getElementById("caption");
+            var captionid = document.getElementById("caption-container-id");
+
+            if (captionText.innerHTML.indexOf("Silver") !== -1) {
+                captionid.classList.remove("black");
+                captionid.classList.add("silver");
+
+            }
+
+            if (captionText.innerHTML.indexOf("Black") !== -1) {
+                captionid.classList.add("black");
+                captionid.classList.remove("silver");
+            }
+
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            document.getElementById("addtocart").addEventListener('click', function () {
+
+                var p = document.querySelector('.packagetype:checked');
+                var c = document.querySelector('.color:checked');
+
+                if (!p) {
+                    document.getElementById("packagetypetext").style.color = "red";
+                } else {
+                    document.getElementById("packagetypetext").style.color = "white";
+                }
+
+                if (!c) {
+                    document.getElementById("colortext").style.color = "red";
+                } else {
+                    document.getElementById("colortext").style.color = "white";
+                }
+
+                if (p || c) {
+                    document.getElementById("Amusing2k").submit();
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
