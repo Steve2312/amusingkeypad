@@ -81,3 +81,8 @@
 .btn:focus {
   outline: 2px dotted #58afd1;
 }
+
+.showmore:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
