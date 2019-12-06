@@ -1,0 +1,55 @@
+.container {
+    background-color: #1c1c1c;
+}
+.cover {
+    position: relative;
+    max-width: 900px;
+    height: 200px;
+    background-image: url(../images/cover.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+}
+
+    .cover h1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0px 0px 0px 20px;
+        text-shadow: 0 1px 3px rgba(0,0,0,.75);
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        border-bottom: 5px solid #00aeff;
+        font-size: 26px;
+    }
+
+.avatar {
+    margin: 10px;
+    width: 80%;
+    height: auto;
+    border-radius: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    font-size: 26px;
+    padding: 8px;
+    color: white;
+}
+
+    a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: #00aeff;
+    }

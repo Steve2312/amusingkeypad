@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../theme_hibiki.css" rel="stylesheet" type="text/css" />
+    <link href="contact.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="../script.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/8d7403f908.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var loaders = document.getElementById('loader');
+            loaders.style.opacity = '0';
+            setTimeout(function () {
+                loaders.remove();
+            }, 900);
+        }
+    </script>
+    <div id='loader'>
+        <div id="loader_wrapper">
+            <div id="loader_border"></div>
+        </div>
+    </div>
+
+    <div class="container" style="justify-content: center; text-align: center; align-content: center; align-items: center;">
+        <div class="cover">
+            <h1 style="font-weight: 500;">Contact information</h1>
+        </div>
+        <div class="row">
+            <div class="col-3 col-s-3">
+                <img class="avatar" src="../images/antecer.png" />
+                <h3>Antecer</h3>
+            </div>
+            <div class="col-9 col-s-9">
+                <h3>Info</h3>
+                <p>Running into issues with the keypad? No problem, just hit me up on one of these social media platforms or join my discord server. Your issue might be already solved in the #issues channel.</p>
+                <nav style="margin: 30px;">
+                    <ul>
+                        <li><a href="https://steamcommunity.com/id/antecer/"><i class="fab fa-steam"></i></a></li>
+                        <li><a onclick="copyToClipboard('antecer@outlook.com')"><i class="fas fa-at"></i></a></li>
+                        <li><a href="https://discord.gg/zpQcjnJ"><i class="fab fa-discord"></i></a></li>
+                        <li><a href="https://github.com/Antecer"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
