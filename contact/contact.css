@@ -53,3 +53,28 @@ a {
     a:hover {
         color: #00aeff;
     }
+
+.svgpath {
+    fill: #FFFFFF;
+}
+
+.svgicon:hover > .svgpath {
+    fill: #00aeff;
+}
+
+.faq {
+    text-align: left;
+    margin: 10px 20px 10px 20px;
+}
+
+.faq_question {
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq_answer_container {
+    display: none;
+}
