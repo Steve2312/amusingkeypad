@@ -25,7 +25,7 @@
 
 .avatar {
     margin: 10px;
-    width: 80%;
+    width: 75%;
     height: auto;
     border-radius: 100%;
 }
@@ -36,23 +36,21 @@ ul {
     margin: 0px;
 }
 
-li {
+.contact li {
     display: inline;
 }
 
-a {
-    font-size: 26px;
+.contact a {
     padding: 8px;
+}
+
+.contact a:visited {
     color: white;
 }
 
-    a:visited {
-        color: white;
-    }
-
-    a:hover {
-        color: #00aeff;
-    }
+.contact a:hover {
+    color: #00aeff;
+}
 
 .svgpath {
     fill: #FFFFFF;
@@ -64,17 +62,30 @@ a {
 
 .faq {
     text-align: left;
-    margin: 10px 20px 10px 20px;
+    
 }
 
 .faq_question {
-    margin: 0;
-    padding: 0px 0px 5px 0px;
+    margin: 10px 20px 10px 20px !important;
+    padding: 0px 0px 5px 0px !important;
     display: inline-block;
     cursor: pointer;
     font-weight: bold;
 }
 
 .faq_answer_container {
+    margin: 0px 0px 0px 20px;
     display: none;
+}
+
+.countries {
+    text-align: left;
+}
+.countries a{
+    font-size: 15px !important;
+}
+
+.countries img {
+    height: 12px;
+    margin: 2px;
 }
