@@ -1,12 +1,12 @@
 .banner {
-    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/banner1.png");
+    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/test4.png");
     margin-top: 40px;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .banner-text {
@@ -99,7 +99,7 @@
 
 .parallax {
     /* The image used */
-    background-image: url("images/test.png");
+    background-image: url("images/test3.png");
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */
@@ -116,7 +116,7 @@
 
 .parallax2 {
     /* The image used */
-    background-image: url("images/banner4.png");
+    background-image: url("images/test2.png");
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */
@@ -129,4 +129,53 @@
     margin-left: -50vw;
     margin-top: 100px;
     left: 50%;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("images/contact.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    margin-top: 100px;
+    left: 50%;
+}
+
+nav {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #58afd1;
+    cursor: pointer;
 }

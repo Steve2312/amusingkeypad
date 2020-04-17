@@ -31,6 +31,10 @@ function copyToClipboard(text) {
     alert(text + " has been copied succesfully!");
 }
 
+function scrolltotop() {
+    $('html, body').animate({ scrollTop: '0px' }, 2500);
+}
+
 $(document).ready(function() {
     $('.faq_question').click(function() {
         if ($(this).parent().is('.open')) {
