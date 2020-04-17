@@ -26,63 +26,107 @@
 }
 
 .draw-border {
-  box-shadow: inset 0 0 0 2px white;
-  color: white;
-  transition: color 0.25s 0.0833333333s;
-  position: relative;
+    box-shadow: inset 0 0 0 2px white;
+    color: white;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
 }
-.draw-border::before, .draw-border::after {
-  border: 0 solid transparent;
-  box-sizing: border-box;
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 0;
-  right: 0;
-}
-.draw-border::before {
-  border-bottom-width: 2px;
-  border-left-width: 2px;
-}
+
+.draw-border::before,
 .draw-border::after {
-  border-top-width: 2px;
-  border-right-width: 2px;
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
 }
+
+.draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+
 .draw-border:hover {
-  color: #58afd1;
+    color: #58afd1;
 }
-.draw-border:hover::before, .draw-border:hover::after {
-  border-color: #58afd1;
-  transition: border-color 0s, width 0.25s, height 0.25s;
-  width: 100%;
-  height: 100%;
-}
-.draw-border:hover::before {
-  transition-delay: 0s, 0s, 0.25s;
-}
+
+.draw-border:hover::before,
 .draw-border:hover::after {
-  transition-delay: 0s, 0.25s, 0s;
+    border-color: #58afd1;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
 }
 
 .btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  line-height: 1.5;
-  font-family: 'Yantramanav', sans-serif;
-  font-weight: 400;
-  font-size: 17px;
-  padding: 1em 2em;
-  margin: 3px;
-  max-width: 200px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 1em 2em;
+    margin: 3px;
+    width: 240px;
 }
+
 .btn:focus {
-  outline: 2px dotted #58afd1;
+    outline: 2px dotted #58afd1;
 }
 
 .showmore:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("images/test.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    margin-top: 100px;
+    left: 50%;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("images/banner4.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    margin-top: 100px;
+    left: 50%;
 }

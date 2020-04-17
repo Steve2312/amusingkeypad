@@ -1,250 +1,261 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="theme_hibiki.css" rel="stylesheet" type="text/css" />
-  <link href="home.css" rel="stylesheet" type="text/css" />
-  <link href="slideshow.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-  <script src="script.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="theme_hibiki.css" rel="stylesheet" type="text/css" />
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link href="slideshow.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="script.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <script>
-    window.onload = function() {
-      var loaders = document.getElementById('loader');
-      loaders.style.opacity = '0';
-      setTimeout(function() {
-        loaders.remove();
-      }, 900);
-    }
-  </script>
-  <div id='loader'>
-    <div id="loader_wrapper">
-      <div id="loader_border"></div>
-    </div>
-  </div>
-
-  <div class="banner">
-    <div class="banner-text" style="justify-content: center; align-content: center; margin-bottom: auto;">
-      <h1 id="rQuote" style="opacity: 1;">Amusing Keypad</h1>
-      <hr style="width: 250px; opacity: 1; color: white; margin-bottom: 20px !important;">
-      <p style="font-size: 12px;">Make sure your country is eligable for e-packet shipping. </p>
-      <p style="font-size: 12px; margin-top: 20px;"> Scroll down for more </p>
-    </div>
-  </div>
-
-  <div class="container" style="justify-content: center; text-align: center; align-content: center; align-items: center; margin-top: 10px;">
-    <div class="row">
-      <div class="col-12 col-s-12">
-        <h1 style="font-weight: 500;">The best 2/6key keypad at the moment</h1>
-        <h3 style="color: grey;">Built with high quality material and made for osu players and people with love for mechanical keypads.</h3>
-      </div>
-    </div>
-
-    <div class="row row_nostack">
-      <div class="col-8 col-s-8">
-        <h2 style="text-align: left;">What is it?</h2>
-        <h3 style="text-align: left; font-weight: 300;">The <a style="font-weight: 500;">AmusingKeypad</a> is a special <a style="font-weight: 500;">osu!</a> Game design and development of keyboard products.</h3>
-      </div>
-
-      <div class="col-4 col-s-4">
-        <img style="width: 80%" src="images/1.png" />
-      </div>
-    </div>
-
-    <div class="row row_nostack">
-      <div class="col-3 col-s-3">
-        <img style="width: 90%" src="images/cherry.png" />
-      </div>
-
-      <div class="col-9 col-s-9">
-        <h2 style="text-align: left;">Switches</h2>
-        <h3 style="text-align: left; font-weight: 300;">We sell the keypad with <a style="font-weight: 500;">Cherry MX</a> switches. The availiable switches are MX Blue, MX Red, MX Black, MX Brown and MX Silver.</h3>
-      </div>
-    </div>
-
-    <div class="row row_nostack">
-      <div class="col-8 col-s-8">
-        <h2 style="text-align: left;">Key bindings</h2>
-        <h3 style="text-align: left; font-weight: 300;">With the drivers you can bind any number of normal key values to the same button to achieve the same input. The drivers will store the new configuration in the keyboard chip, so even if you
-          connect it to other devices, it can be used. </h3>
-      </div>
-
-      <div class="col-4 col-s-4">
-        <img style="width: 80%" src="images/driver.png" />
-      </div>
-    </div>
-
-    <div class="row row_nostack">
-      <div class="col-3 col-s-3">
-        <img style="width: 80%" src="images/rgb.png" />
-      </div>
-
-      <div class="col-9 col-s-9">
-        <h2 style="text-align: left;">Lighting modes</h2>
-        <h3 style="text-align: left; font-weight: 300;">It contains multiple <a style="font-weight: 500;">rgb-leds</a>, and you can specify different colors or display modes for each Led.</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 col-s-12">
-        <h1>Products</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-        <img src="images/gif.gif" style="width: 100%" />
-        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"An AmusingKeypad with RGB and 2 hot swappable Cherry MX Switches."</i></p>
-        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-        <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadPro</h3>
-        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 32.60$ - 38.40$</p>
-        <p class="showmore">Show more</p>
-      </div>
-
-      <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-        <img src="images/6k.png" style="width: 100%" />
-        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"Latest AmusingKeypad with RGB and 6 hot swappable Cherry MX Switches."</i></p>
-        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-        <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadK6</h3>
-        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 37.00$ - 42.40$</p>
-        <p class="showmore">Show more</p>
-      </div>
-
-      <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-        <img src="images/switches.png" style="width: 100%" />
-        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"High quality Cherry MX switches, including all sorts of variants. Sold per 2 switches."</i></p>
-        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-        <h3 style="margin-bottom: 0; opacity: 0.7;">Cherry MX Switches</h3>
-        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: ¥10.00 - ¥12.00</p>
-        <p class="showmore">Show more</p>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-12 col-s-12">
-        <h1>Drivers</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-6 col-s-6">
-        <h2 style="margin-top: 0px;">Downloads</h2>
-        <button onclick="v3download()" class="btn draw-border">AmusingKeypadV3</button>
-        <br />
-        <button onclick="prodownload()" class="btn draw-border">AmusingKeypadPro</button>
-        <br />
-        <button onclick="sixkeydownload()" class="btn draw-border">AmusingKeypadK6</button>
-      </div>
-
-      <div class="col-6 col-s-6">
-        <div class="slideshow-container fade">
-
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <img src="images/driver1.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/driver2.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/driver3.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/driver4.jpg" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/driver5.png" style="width:100%">
-          </div>
+    <div class="banner">
+        <div class="banner-text" style="justify-content: center; align-content: center; margin-bottom: auto;">
+            <h1 id="rQuote" style="opacity: 1;">Amusing Keypad</h1>
+            <hr style="width: 250px; opacity: 1; color: white; margin-bottom: 20px !important;">
+            <p style="font-size: 12px;">Make sure your country is eligable for e-packet shipping. </p>
+            <p style="font-size: 12px; margin-top: 20px;"> Scroll down for more </p>
         </div>
-        <br>
+    </div>
 
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
+    <div class="container" style="justify-content: center; text-align: center; align-content: center; align-items: center; margin-top: 10px;">
+        <!--Front Title-->
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <h1 style="font-weight: 500;">The best 2/6key keypad at the moment</h1>
+                <h3 style="color: grey;">Built with high quality material and made for osu players and people with love for mechanical keypads.</h3>
+            </div>
         </div>
-      </div>
+        <!--Front text-->
+        <div class="row row_nostack">
+            <div class="col-8 col-s-8">
+                <h2 style="text-align: left;">What is it?</h2>
+                <h3 style="text-align: left; font-weight: 300;">The <a style="font-weight: 500;">AmusingKeypad</a> is a special <a style="font-weight: 500;">osu!</a> Game design and development of keyboard products.</h3>
+            </div>
+
+            <div class="col-4 col-s-4">
+                <img style="width: 80%" src="images/1.png" />
+            </div>
+        </div>
+        <!--Cherry MX-->
+        <div class="row row_nostack">
+            <div class="col-3 col-s-3">
+                <img style="width: 90%" src="images/cherry.png" />
+            </div>
+
+            <div class="col-9 col-s-9">
+                <h2 style="text-align: left;">Switches</h2>
+                <h3 style="text-align: left; font-weight: 300;">We sell the keypad with <a style="font-weight: 500;">Cherry MX</a> switches. The availiable switches are MX Blue, MX Red, MX Black, MX Brown and MX Silver.</h3>
+            </div>
+        </div>
+        <!--Key Bindings-->
+        <div class="row row_nostack">
+            <div class="col-8 col-s-8">
+                <h2 style="text-align: left;">Key bindings</h2>
+                <h3 style="text-align: left; font-weight: 300;">With the drivers you can bind any number of normal key values to the same button to achieve the same input. The drivers will store the new configuration in the keyboard chip, so even if you connect it to other devices, it can be used.
+                </h3>
+            </div>
+
+            <div class="col-4 col-s-4">
+                <img style="width: 80%" src="images/driver.png" />
+            </div>
+        </div>
+        <!--Lighting modes-->
+        <div class="row row_nostack">
+            <div class="col-3 col-s-3">
+                <img style="width: 80%" src="images/rgb.png" />
+            </div>
+
+            <div class="col-9 col-s-9">
+                <h2 style="text-align: left;">Lighting modes</h2>
+                <h3 style="text-align: left; font-weight: 300;">It contains multiple <a style="font-weight: 500;">rgb-leds</a>, and you can specify different colors or display modes for each Led.</h3>
+            </div>
+        </div>
+
+        <div class="parallax"></div>
+
+        <!--Products Title-->
+        <div style="margin: 50px 0px 50px 0px;">
+            <div class="row">
+                <div class="col-12 col-s-12">
+                    <h1>Products</h1>
+                </div>
+            </div>
+            <!--Products-->
+            <div class="row">
+                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
+                    <img src="images/gif.gif" style="width: 100%" />
+                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"An AmusingKeypad with RGB and 2 hot swappable Cherry MX Switches."</i></p>
+                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                    <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadPro</h3>
+                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 32.60$ - 38.40$</p>
+                    <p class="showmore">Show more</p>
+                </div>
+
+                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
+                    <img src="images/6k.png" style="width: 100%" />
+                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"Latest AmusingKeypad with RGB and 6 hot swappable Cherry MX Switches."</i></p>
+                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                    <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadK6</h3>
+                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 37.00$ - 42.40$</p>
+                    <p class="showmore">Show more</p>
+                </div>
+
+                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
+                    <img src="images/switches.png" style="width: 100%" />
+                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"High quality Cherry MX switches, including all sorts of variants. Sold per 2 switches."</i></p>
+                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                    <h3 style="margin-bottom: 0; opacity: 0.7;">Cherry MX Switches</h3>
+                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: ¥10.00 - ¥12.00</p>
+                    <p class="showmore">Show more</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Drivers Title-->
+        <div style="margin: 50px 0px 50px 0px;">
+            <div class="row">
+                <div class="col-12 col-s-12">
+                    <h1>Drivers</h1>
+                </div>
+            </div>
+            <!--Drivers-->
+            <div class="row">
+                <div class="col-6 col-s-6">
+                    <h2 style="margin-top: 0px;">Downloads</h2>
+                    <button onclick="v3download()" class="btn draw-border">AmusingKeypadV3</button>
+                    <br />
+                    <button onclick="prodownload()" class="btn draw-border">AmusingKeypad Pro/6k</button>
+                </div>
+
+                <div class="col-6 col-s-6">
+                    <div class="slideshow-container fade">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <img src="images/driver1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="images/driver2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="images/driver3.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="images/driver4.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="images/driver5.png" style="width:100%">
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax2"></div>
+
+        <!--Discord Title-->
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <h1>Discord</h1>
+            </div>
+        </div>
+        <!--Discord-->
+        <div class="row">
+            <div class="col-6 col-s-6">
+                <h2 style="text-align: left;">Join our community!</h2>
+                <p style="text-align: left; font-weight: 300;">Do you have any problems with the keypad? Just join our discord server and we are happy to get notified about your issue. Apart from that you can be part of our good community to make some new friends. We will be happy to have you in the
+                    server!
+                </p>
+            </div>
+            <div class="col-6 col-s-6">
+                <iframe src="https://discordapp.com/widget?id=368421070140735488&theme=dark" style="width: 100%; height: 300px;" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+        </div>
+        <!--Staff-->
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <h1>Staff</h1>
+            </div>
+        </div>
+        <!--Staff pictures-->
+        <div class="row">
+            <div class="col-2-5 col-s-2-5 border">
+                <img src="images/antecer.png" style="width: 90%; margin-top: 20px;" />
+                <p> Antecer </p>
+                <p> Shop owner </p>
+            </div>
+
+            <div class="col-2-5 col-s-2-5 border">
+                <img src="images/ramen.png" style="width: 90%; margin-top: 20px;" />
+                <p> Ramen </p>
+                <p> Designer </p>
+            </div>
+
+            <div class="col-2-5 col-s-2-5 border">
+                <img src="images/stubbs.png" style="width: 90%; margin-top: 20px;" />
+                <p> Stubbs </p>
+                <p> Website helper </p>
+            </div>
+
+            <div class="col-2-5 col-s-2-5 border">
+                <img src="images/steve.png" style="width: 90%; margin-top: 20px;" />
+                <p> Steve </p>
+                <p> Website creator </p>
+            </div>
+
+            <div class="col-2-5 col-s-2-5 border">
+                <img src="images/vaddy.png" style="width: 90%; margin-top: 20px;" />
+                <p> Vaddy </p>
+                <p> Moral support </p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="row">
-      <div class="col-12 col-s-12">
-        <h1>Staff</h1>
-      </div>
-    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
 
-    <div class="row">
-      <div class="col-2-5 col-s-2-5 border">
-        <img src="images/antecer.png" style="width: 90%; margin-top: 20px;" />
-        <p> Antecer </p>
-        <p> Shop owner </p>
-      </div>
+        function currentSlide(n) {
+            slideIndex = n - 1;
+        }
 
-      <div class="col-2-5 col-s-2-5 border">
-        <img src="images/ramen.png" style="width: 90%; margin-top: 20px;" />
-        <p> Ramen </p>
-        <p> Designer </p>
-      </div>
-
-      <div class="col-2-5 col-s-2-5 border">
-        <img src="images/stubbs.png" style="width: 90%; margin-top: 20px;" />
-        <p> Stubbs </p>
-        <p> Website helper </p>
-      </div>
-
-      <div class="col-2-5 col-s-2-5 border">
-        <img src="images/steve.png" style="width: 90%; margin-top: 20px;" />
-        <p> Steve </p>
-        <p> Website creator </p>
-      </div>
-
-      <div class="col-2-5 col-s-2-5 border">
-        <img src="images/vaddy.png" style="width: 90%; margin-top: 20px;" />
-        <p> Vaddy </p>
-        <p> Moral support </p>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function currentSlide(n) {
-      slideIndex = n - 1;
-    }
-
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 7000); // Change image every 2 seconds
-    }
-  </script>
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 7000); // Change image every 2 seconds
+        }
+    </script>
 
 </body>
 
