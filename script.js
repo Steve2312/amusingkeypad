@@ -43,6 +43,21 @@ function scrollDivMobile(a) {
     $('html, body').animate({ scrollTop: $(a).offset().top - 400 }, 2000);
 }
 
+function showhide() {
+    var mobilenav = document.getElementById("mobilenav");
+    mobilenav.classList.toggle("mobilenavhide");
+}
+var numbers = [0, 1]
+
+function imagebanner() {
+    var banner = document.getElementById("banner");
+    var images = ["setup1.png", "setup2.png"];
+    var random = Math.floor(Math.random() * 2)
+    var file = `images/webready/${images[random]}`;
+    banner.style.backgroundImage = `linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url(` + `"` + `${file}` + `"` + `)`;
+    setTimeout(function() { banner.classList.remove("fade-in"); }, 5000);
+}
+
 $(document).ready(function() {
     $('.faq_question').click(function() {
         if ($(this).parent().is('.open')) {
@@ -55,9 +70,6 @@ $(document).ready(function() {
             $(this).closest('.faq').addClass('open');
         }
     });
-});
 
-function showhide() {
-    var mobilenav = document.getElementById("mobilenav");
-    mobilenav.classList.toggle("mobilenavhide");
-}
+    imagebanner();
+});

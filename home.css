@@ -1,5 +1,4 @@
 .banner {
-    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/pink.jpg");
     margin-top: 40px;
     height: 100%;
     background-position: center;
@@ -99,9 +98,9 @@
 
 .parallax {
     /* The image used */
-    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/image1.jpg");
+    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/image1.png");
     /* Set a specific height */
-    height: 500px;
+    height: 700px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -116,7 +115,7 @@
 
 .parallax2 {
     /* The image used */
-    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/image2.jpg");
+    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/image2.png");
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */
@@ -133,7 +132,7 @@
 
 .parallax3 {
     /* The image used */
-    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/pink.jpg");
+    background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/pink.png");
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */

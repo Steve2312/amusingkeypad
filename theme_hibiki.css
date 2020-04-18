@@ -326,3 +326,16 @@ a:visited {
     /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
 }
+
+.fade-in {
+    animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
