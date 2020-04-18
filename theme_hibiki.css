@@ -45,15 +45,6 @@ body {
     height: auto;
 }
 
-.product {
-    border-radius: 14px !important;
-}
-
-.product img {
-    border-top-left-radius: 3px !important;
-    border-top-right-radius: 3px !important;
-}
-
 
 /* For mobile phones: */
 
@@ -195,11 +186,25 @@ p {
     margin-right: auto;
 }
 
-.border {
+.product {
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
+    width: 98%;
     background-color: #141414;
-    border-radius: 10px;
-    border: solid 10px #0d0d0d;
+    border-radius: 3px;
+    padding: 0px 0px 20px 0px;
+}
+
+.product img {
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+}
+
+.border {
+    background-color: #141414;
+    border-radius: 3px;
+    padding: 0px 0px 20px 0px;
 }
 
 hr {
@@ -214,4 +219,110 @@ a,
 a:visited {
     color: inherit;
     text-decoration: none;
+}
+
+.desktopnav {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: block;
+}
+
+.desktopnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.desktopnav li {
+    float: left;
+}
+
+.desktopnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.desktopnav li a:hover {
+    color: #58afd1;
+    cursor: pointer;
+}
+
+.mobilenav {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all .5s ease-in-out;
+    height: 400px;
+    display: none;
+}
+
+.mobilenavhide {
+    transition: all .5s ease-in-out;
+    height: 0;
+}
+
+.mobilenav ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mobilenav li a {
+    display: block;
+    color: white;
+    text-align: left;
+    margin: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mobilenav li a:hover {
+    color: #58afd1;
+    cursor: pointer;
+}
+
+.showhidenav {
+    position: inherit;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .mobilenav {
+        display: block;
+    }
+    .showhidenav {
+        display: block;
+    }
+    .desktopnav {
+        display: none;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
 }

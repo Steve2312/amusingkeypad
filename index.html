@@ -11,13 +11,26 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="desktopnav">
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Product</a></li>
-            <li><a>Driver</a></li>
-            <li><a>Discord</a></li>
-            <li><a>Contact</a></li>
+            <li><a style="cursor:default;">Antecer</a></li>
+            <li><a onclick="scrollDiv('#products');">Product</a></li>
+            <li><a onclick="scrollDiv('#drivers');">Driver</a></li>
+            <li><a onclick="scrollDiv('#discord');">Discord</a></li>
+            <li><a onclick="scrollDiv('#contact');">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="showhidenav noselect">
+        <a style="float: right; font-size: 40px; margin: 10px;" onclick="showhide();">⤾</a>
+    </div>
+    <nav class="mobilenav mobilenavhide" id="mobilenav">
+        <ul>
+            <li><a style="cursor:default;">Antecer</a></li>
+            <li><a onclick="scrollDivMobile('#products');showhide();">Product</a></li>
+            <li><a onclick="scrollDivMobile('#drivers');showhide();">Driver</a></li>
+            <li><a onclick="scrollDivMobile('#discord');showhide();">Discord</a></li>
+            <li><a onclick="scrollDivMobile('#contact');showhide();">Contact</a></li>
         </ul>
     </nav>
 
@@ -87,7 +100,7 @@
         <div class="parallax"></div>
 
         <!--Products Title-->
-        <div style="margin: 50px 0px 50px 0px;">
+        <div style="margin: 50px 0px 50px 0px;" id="products">
             <div class="row">
                 <div class="col-12 col-s-12">
                     <h1>Products</h1>
@@ -95,37 +108,43 @@
             </div>
             <!--Products-->
             <div class="row">
-                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-                    <img src="images/gif.gif" style="width: 100%" />
-                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"An AmusingKeypad with RGB and 2 hot swappable Cherry MX Switches."</i></p>
-                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-                    <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadPro</h3>
-                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 32.60$ - 38.40$</p>
-                    <p class="showmore">Shop now</p>
+                <div class="col-4 col-s-product">
+                    <div class="product">
+                        <img src="images/gif.gif" style="width: 100%" />
+                        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"An AmusingKeypad with RGB and 2 hot swappable Cherry MX Switches."</i></p>
+                        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                        <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadPro</h3>
+                        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 32.60$ - 38.40$</p>
+                        <p class="showmore">Shop now</p>
+                    </div>
                 </div>
 
-                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-                    <img src="images/6k.png" style="width: 100%" />
-                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"Latest AmusingKeypad with RGB and 6 hot swappable Cherry MX Switches."</i></p>
-                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-                    <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadK6</h3>
-                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 37.00$ - 42.40$</p>
-                    <p class="showmore">Shop now</p>
+                <div class="col-4 col-s-product">
+                    <div class="product">
+                        <img src="images/6k.png" style="width: 100%" />
+                        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"Latest AmusingKeypad with RGB and 6 hot swappable Cherry MX Switches."</i></p>
+                        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                        <h3 style="margin-bottom: 0; opacity: 0.7;">AmusingKeypadK6</h3>
+                        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: 37.00$ - 42.40$</p>
+                        <p class="showmore">Shop now</p>
+                    </div>
                 </div>
 
-                <div class="col-4 col-s-product border product" style="padding: 0 0 15px 0;">
-                    <img src="images/switches.png" style="width: 100%" />
-                    <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"High quality Cherry MX switches, including all sorts of variants. Sold per 2 switches."</i></p>
-                    <hr style="border: solid 1px white; width: 100px; height: 1px;" />
-                    <h3 style="margin-bottom: 0; opacity: 0.7;">Cherry MX Switches</h3>
-                    <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: ¥10.00 - ¥12.00</p>
-                    <p class="showmore">Show more</p>
+                <div class="col-4 col-s-product">
+                    <div class="product">
+                        <img src="images/switches.png" style="width: 100%" />
+                        <p style="padding: 0 15px 0 15px; margin: 25px 0 0 0; opacity: 0.7;"><i>"High quality Cherry MX switches, including all sorts of variants. Sold per 2 switches."</i></p>
+                        <hr style="border: solid 1px white; width: 100px; height: 1px;" />
+                        <h3 style="margin-bottom: 0; opacity: 0.7;">Cherry MX Switches</h3>
+                        <p style="margin: 0; font-size: 15px; opacity: 0.7;">Price: ¥10.00 - ¥12.00</p>
+                        <p class="showmore">Show more</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!--Drivers Title-->
-        <div style="margin: 50px 0px 50px 0px;">
+        <div style="margin: 50px 0px 50px 0px;" id="drivers">
             <div class="row">
                 <div class="col-12 col-s-12">
                     <h1>Drivers</h1>
@@ -136,7 +155,6 @@
                 <div class="col-6 col-s-6">
                     <h2 style="margin-top: 0px;">Downloads</h2>
                     <button onclick="v3download()" class="btn draw-border">AmusingKeypadV3</button>
-                    <br />
                     <button onclick="prodownload()" class="btn draw-border">AmusingKeypad Pro/6k</button>
                 </div>
 
@@ -181,66 +199,80 @@
         <div class="parallax2"></div>
 
         <!--Discord Title-->
-        <div class="row">
-            <div class="col-12 col-s-12">
-                <h1>Discord</h1>
+        <div style="margin: 50px 0px 50px 0px;" id="discord">
+            <div class="row">
+                <div class="col-12 col-s-12">
+                    <h1>Discord</h1>
+                </div>
+            </div>
+            <!--Discord-->
+            <div class="row">
+                <div class="col-6 col-s-6">
+                    <h2 style="text-align: left;">Join our community!</h2>
+                    <p style="text-align: left; font-weight: 300;">Do you have any problems with the keypad? Just join our discord server and we are happy to get notified about your issue. Apart from that you can be part of our good community to make some new friends. We will be happy to have you
+                        in the server!
+                    </p>
+                </div>
+                <div class="col-6 col-s-6">
+                    <iframe src="https://discordapp.com/widget?id=451180332570378241&theme=dark" style="width: 100%; height: 300px;" allowtransparency="true" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
-        <!--Discord-->
-        <div class="row">
-            <div class="col-6 col-s-6">
-                <h2 style="text-align: left;">Join our community!</h2>
-                <p style="text-align: left; font-weight: 300;">Do you have any problems with the keypad? Just join our discord server and we are happy to get notified about your issue. Apart from that you can be part of our good community to make some new friends. We will be happy to have you in the
-                    server!
-                </p>
+        <div style="margin: 50px 0px 50px 0px;" id="discord">
+            <!--Staff-->
+            <div class="row">
+                <div class="col-12 col-s-12">
+                    <h1>Staff</h1>
+                </div>
             </div>
-            <div class="col-6 col-s-6">
-                <iframe src="https://discordapp.com/widget?id=368421070140735488&theme=dark" style="width: 100%; height: 300px;" allowtransparency="true" frameborder="0"></iframe>
-            </div>
-        </div>
-        <!--Staff-->
-        <div class="row">
-            <div class="col-12 col-s-12">
-                <h1>Staff</h1>
-            </div>
-        </div>
-        <!--Staff pictures-->
-        <div class="row">
-            <div class="col-2-5 col-s-2-5 border">
-                <img src="images/antecer.png" style="width: 90%; margin-top: 20px;" />
-                <p> Antecer </p>
-                <p> Shop owner </p>
-            </div>
+            <!--Staff pictures-->
+            <div class="row">
+                <div class="col-2-5 col-s-2-5">
+                    <div class="border">
+                        <img src="images/antecer.png" style="width: 90%; margin-top: 20px;" />
+                        <p> Antecer </p>
+                        <p> Shop owner </p>
+                    </div>
+                </div>
 
-            <div class="col-2-5 col-s-2-5 border">
-                <img src="images/ramen.png" style="width: 90%; margin-top: 20px;" />
-                <p> Ramen </p>
-                <p> Designer </p>
-            </div>
+                <div class="col-2-5 col-s-2-5">
+                    <div class="border">
+                        <img src="images/ramen.png" style="width: 90%; margin-top: 20px;" />
+                        <p> Ramen </p>
+                        <p> Designer </p>
+                    </div>
+                </div>
 
-            <div class="col-2-5 col-s-2-5 border">
-                <img src="images/stubbs.png" style="width: 90%; margin-top: 20px;" />
-                <p> Stubbs </p>
-                <p> Website helper </p>
-            </div>
+                <div class="col-2-5 col-s-2-5">
+                    <div class="border">
+                        <img src="images/stubbs.png" style="width: 90%; margin-top: 20px;" />
+                        <p> Stubbs </p>
+                        <p> Website helper </p>
+                    </div>
+                </div>
 
-            <div class="col-2-5 col-s-2-5 border">
-                <img src="images/steve.png" style="width: 90%; margin-top: 20px;" />
-                <p> Steve </p>
-                <p> Website creator </p>
-            </div>
+                <div class="col-2-5 col-s-2-5">
+                    <div class="border">
+                        <img src="images/steve.png" style="width: 90%; margin-top: 20px;" />
+                        <p> Steve </p>
+                        <p> Website creator </p>
+                    </div>
+                </div>
 
-            <div class="col-2-5 col-s-2-5 border">
-                <img src="images/vaddy.png" style="width: 90%; margin-top: 20px;" />
-                <p> Vaddy </p>
-                <p> Moral support </p>
+                <div class="col-2-5 col-s-2-5">
+                    <div class="border">
+                        <img src="images/vaddy.png" style="width: 90%; margin-top: 20px;" />
+                        <p> Vaddy </p>
+                        <p> Moral support </p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="parallax3"></div>
 
         <!--Contact-->
-        <div class="row">
+        <div class="row" id="contact">
             <div class="col-12 col-s-12">
                 <h2>Contact</h1>
             </div>
@@ -263,6 +295,12 @@
                 <p style="margin: 0; color: grey;">Uh oh. You reached the end of this page. :O</p>
                 <p style="margin: 0; color: grey;">Would you like to go back to the top of this page?</p>
                 <p style="margin: 0; color: grey;">Click <a class="showmore" onclick="scrolltotop()" style="color: grey;">here</a> to go back to top.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <p style="margin: 0; color: grey; text-align: right;">©Antecer</p>
             </div>
         </div>
 

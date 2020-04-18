@@ -35,6 +35,14 @@ function scrolltotop() {
     $('html, body').animate({ scrollTop: '0px' }, 2500);
 }
 
+function scrollDiv(a) {
+    $('html, body').animate({ scrollTop: $(a).offset().top }, 2000);
+}
+
+function scrollDivMobile(a) {
+    $('html, body').animate({ scrollTop: $(a).offset().top - 400 }, 2000);
+}
+
 $(document).ready(function() {
     $('.faq_question').click(function() {
         if ($(this).parent().is('.open')) {
@@ -48,3 +56,8 @@ $(document).ready(function() {
         }
     });
 });
+
+function showhide() {
+    var mobilenav = document.getElementById("mobilenav");
+    mobilenav.classList.toggle("mobilenavhide");
+}
