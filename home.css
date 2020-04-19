@@ -98,6 +98,7 @@
 
 .parallax {
     /* The image used */
+    background-color: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d);
     background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/image1.png");
     /* Set a specific height */
     height: 700px;
@@ -117,7 +118,7 @@
     /* The image used */
     background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/image2.png");
     /* Set a specific height */
-    height: 500px;
+    height: 700px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -134,7 +135,7 @@
     /* The image used */
     background-image: linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url("images/webready/pink.png");
     /* Set a specific height */
-    height: 500px;
+    height: 700px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -145,4 +146,22 @@
     margin-left: -50vw;
     margin-top: 100px;
     left: 50%;
+}
+
+.layer {
+    background: linear-gradient(rgba(13, 13, 13, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(13, 13, 13, 1));
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+    .parallax2 {
+        background-attachment: scroll;
+    }
+    .parallax3 {
+        background-attachment: scroll;
+    }
 }

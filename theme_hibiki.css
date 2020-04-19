@@ -262,12 +262,13 @@ a:visited {
     z-index: 2;
     transition: all .5s ease-in-out;
     height: 400px;
-    display: none;
+    opacity: 1 !important;
 }
 
 .mobilenavhide {
     transition: all .5s ease-in-out;
     height: 0;
+    opacity: 0 !important;
 }
 
 .mobilenav ul {
