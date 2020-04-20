@@ -32,15 +32,31 @@ function copyToClipboard(text) {
 }
 
 function scrolltotop() {
-    $('html, body').animate({ scrollTop: '0px' }, 2500);
+    $('html, body').animate({ scrollTop: "0px" }, {
+        duration: 3000,
+        easing: "easeInOutExpo"
+    });
 }
 
 function scrollDiv(a) {
-    $('html, body').animate({ scrollTop: $(a).offset().top }, 2000);
+    $('html, body').animate({ scrollTop: $(a).offset().top }, {
+        duration: 2500,
+        easing: "easeInOutExpo"
+    });
 }
 
 function scrollDivMobile(a) {
-    $('html, body').animate({ scrollTop: $(a).offset().top - 400 }, 2000);
+    $('html, body').animate({ scrollTop: $(a).offset().top - 400 }, {
+        duration: 2500,
+        easing: "easeInOutExpo"
+    });
+}
+
+function scrollContact() {
+    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, {
+        duration: 2500,
+        easing: "easeInOutExpo"
+    });
 }
 
 function showhide() {
@@ -54,7 +70,7 @@ function imagebanner() {
     var images = ["setup1.png", "setup2.png"];
     var random = Math.floor(Math.random() * 2)
     var file = `images/webready/${images[random]}`;
-    banner.style.backgroundImage = `linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), #0d0d0d), url(` + `"` + `${file}` + `"` + `)`;
+    banner.style.backgroundImage = `linear-gradient(#0d0d0d, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38), #0d0d0d), url(` + `"` + `${file}` + `"` + `)`;
     setTimeout(function() { banner.classList.remove("fade-in"); }, 5000);
 }
 
