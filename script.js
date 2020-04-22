@@ -89,3 +89,10 @@ $(document).ready(function() {
 
     imagebanner();
 });
+
+$(window).resize(function() {
+    if (!$("#mobilenav").hasClass(".mobilenavhide")) {
+        var mobilenav = document.getElementById("mobilenav");
+        mobilenav.classList.add("mobilenavhide");
+    }
+});
