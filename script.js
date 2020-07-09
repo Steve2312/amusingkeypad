@@ -39,7 +39,7 @@ function scrolltotop() {
 }
 
 function scrollDiv(a) {
-    $('html, body').animate({ scrollTop: $(a).offset().top }, {
+    $('html, body').animate({ scrollTop: $(a).offset().top}, {
         duration: 2500,
         easing: "easeInOutExpo"
     });
