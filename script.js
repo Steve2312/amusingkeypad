@@ -1,5 +1,5 @@
 function v3download() {
-    var download = "/drivers_exe/OsuKeyboardV3.exe";
+    var download = "/amusingkeypad.github.io/drivers_exe/OsuKeyboardV3.exe";
     document.getElementById('download').src = download;
     this.window.focus();
 }
