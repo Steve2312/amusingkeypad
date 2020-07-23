@@ -1,6 +1,6 @@
 function v3download() {
-    var download = "https://gitee.com/Antecer/OsuKeyboard/raw/master/OsuKeyboard/bin/Release/OsuKeyboard.exe";
-    window.open(download, "_blank", 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1,height=1');
+    var download = "/drivers_exe/OsuKeyboardV3.exe";
+    document.getElementById('download').src = download;
     this.window.focus();
 }
 
