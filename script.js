@@ -5,20 +5,9 @@ function v3download() {
 }
 
 function prodownload() {
-    fetch('https://antecer.github.io/drivers/app/AppVerList.md')
-        .then(res => res.text())
-        .then(txt => {
-            let versions = txt.split('\n');
-            console.log('AppVerList:', versions);
-            let lastVer = versions.length > 0 ? versions[0] : '0.0.0.0';
-
-            let downnode = document.createElement("a");
-            downnode.download = 'AmusingDeviceApplication.exe';
-            downnode.href = `https://antecer.github.io/drivers/app/app_${lastVer}`;
-            document.body.appendChild(downnode); // Fix for firefox, the anchor has to be appended to the DOM.
-            downnode.click();
-            document.body.removeChild(downnode);
-        })
+    var download = "/amusingkeypad.github.io/drivers_exe/AmusingDeviceApplication.exe";
+    document.getElementById('download').src = download;
+    this.window.focus();
 }
 
 function copyToClipboard(text) {
