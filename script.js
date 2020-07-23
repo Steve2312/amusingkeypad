@@ -5,16 +5,16 @@ function v3download() {
 }
 
 function sixkeydownload() {
-    fetch('https://raw.githubusercontent.com/Antecer/antecer.github.io/master/drivers/app/AppVerList.txt')
+    fetch('https://antecer.github.io/drivers/app/AppVerList.md')
         .then(res => res.text())
         .then(txt => {
             let versions = txt.split('\n');
+            console.log('AppVerList:', versions);
             let lastVer = versions.length > 0 ? versions[0] : '0.0.0.0';
-            console.log('LastAppVer:', lastVer)
 
             let downnode = document.createElement("a");
             downnode.download = 'AmusingDeviceApplication.exe';
-            downnode.href = `https://antecer.github.io/drivers/app/app_${lastVer}.exe`;
+            downnode.href = `/drivers/app/app_${lastVer}`;
             document.body.appendChild(downnode); // Fix for firefox, the anchor has to be appended to the DOM.
             downnode.click();
             document.body.removeChild(downnode);
