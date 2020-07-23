@@ -4,7 +4,7 @@ function v3download() {
     this.window.focus();
 }
 
-function sixkeydownload() {
+function prodownload() {
     fetch('https://antecer.github.io/drivers/app/AppVerList.md')
         .then(res => res.text())
         .then(txt => {
